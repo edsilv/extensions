@@ -2,4 +2,6 @@
 
 Extends native objects with utility functions.
 
-WARNING use with caution as this may not play nicely with other libraries.
+##WARNING
+
+Use with caution. Other libraries may have their own incompatible custom extensions.
