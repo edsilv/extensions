@@ -19,7 +19,7 @@ interface StringConstructor {
 }
 
 interface Array<T>{
-    clone(): any[];
+    clone(): Array<T>;
     contains(val: any): boolean;
     indexOf(searchElement: any, fromIndex?: number): number;
     indexOfTest(test: (item: any) => boolean, fromIndex?: number): number;
