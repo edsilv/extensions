@@ -1,6 +1,6 @@
 {
   "name": "extensions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "extends global objects with utility functions",
   "main": "dist/extensions.js",
   "scripts": {
@@ -22,7 +22,6 @@
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-bump": "^0.3.1",
-    "gulp-exec": "^2.1.1",
     "gulp-mocha": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-typescript": "^2.7.4",
