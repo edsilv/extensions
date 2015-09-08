@@ -24,6 +24,12 @@ describe("#endsWith", function() {
     });
 });
 
+describe("#hashCode", function() {
+    it("converts to hash code", function () {
+        "my test string".hashCode().should.equal("-896584981");
+    });
+});
+
 describe("#format", function() {
     it("formats string", function () {
         String.format("my {0} string", "test").should.equal("my test string");
