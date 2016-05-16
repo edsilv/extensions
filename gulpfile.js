@@ -12,7 +12,7 @@ var Config = require('./gulpfile.config'),
 
 gulp.task('test', function () {
     return gulp.src(config.test, {read: false})
-        .pipe(mocha({reporter: 'nyan'}));
+        .pipe(mocha());
 });
 
 gulp.task('clean:dist', function (cb) {
@@ -39,5 +39,5 @@ gulp.task('build', function() {
 });
 
 gulp.task('default', function(cb) {
-    runSequence('clean:dist', 'build', 'bump', 'test', cb);
+    runSequence('clean:dist', 'build', 'test', cb);
 });

@@ -30,6 +30,13 @@ describe("#hashCode", function() {
     });
 });
 
+describe("#alphanumeric", function() {
+    it("is alphanumeric", function () {
+        "myteststring123".isAlphanumeric().should.equal(true);
+        "+=-()<>?/".isAlphanumeric().should.equal(false);
+    });
+});
+
 describe("#format", function() {
     it("formats string", function () {
         String.format("my {0} string", "test").should.equal("my test string");
