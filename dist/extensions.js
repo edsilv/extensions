@@ -1,3 +1,4 @@
+// extensions v0.1.9 https://github.com/edsilv/extensions
 if (!Array.prototype.clone) {
     Array.prototype.clone = function () {
         return this.slice(0);

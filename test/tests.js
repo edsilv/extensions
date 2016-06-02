@@ -1,6 +1,6 @@
-var expect = require('chai').expect,
-    should = require('chai').should(),
-    extensions = require('../dist/extensions');
+var expect = require('chai').expect;
+var should = require('chai').should();
+var extensions = require('../dist/extensions');
 
 // todo: can't be tested by node process - needs window
 //describe('#b64_to_utf8', function() {
