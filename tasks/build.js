@@ -6,11 +6,11 @@ var ts = require('gulp-typescript');
 
 gulp.task('build', function() {
 
-    var tsResult = gulp.src(config.tsSrc)
-        .pipe(ts(config.tsConfig));
+    var tsResult = gulp.src(config.typescript.src)
+        .pipe(ts(config.typescript.config));
 
     return merge([
-        tsResult.dts.pipe(gulp.dest(config.dist)),
-        tsResult.js.pipe(gulp.dest(config.dist))
+        tsResult.dts.pipe(gulp.dest(config.directories.dist)),
+        tsResult.js.pipe(gulp.dest(config.directories.dist))
     ]);
 });

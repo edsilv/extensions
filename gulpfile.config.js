@@ -4,19 +4,27 @@ var metadata = require('./package');
 var GulpConfig = (function () {
     function GulpConfig() {
         this.name = metadata.name;
-        this.dist = './dist';
         this.header = '// ' + metadata.name + ' v' + metadata.version + ' ' + metadata.homepage + '\n';
-        this.jsOut = this.name + '.js';
-        this.test = 'test/test.js';
-        this.tsSrc = ['src/*.ts', 'typings/*.ts', '!test'];
-        this.tsConfig = {
-            declarationFiles: false,
-            noExternalResolve: true,
-            noLib: false,
-            module: 'commonjs',
-            out: this.jsOut
+        this.fileNames = {
+            jsOut: this.name + '.js',
+            jsMinOut: this.name + '.min.js',
+            dtsOut: this.name + '.d.ts',
+            test: 'test/tests.js'
         };
-        this.typingsDir = './typings';
+        this.directories = {
+            dist: './dist',
+            typings: './typings'
+        };
+        this.typescript = {
+            src: ['src/*.ts', 'typings/*.ts', '!test'],
+            config: {
+                declarationFiles: false,
+                noExternalResolve: true,
+                noLib: false,
+                module: 'commonjs',
+                out: this.fileNames.jsOut
+            }
+        };
     }
     return GulpConfig;
 })();
