@@ -1,3 +1,9 @@
+if (!Math.clamp) {
+    Math.clamp = function(value: number, min: number, max: number): number{
+        return Math.min(Math.max(value, min), max);
+    }
+}
+
 if (!Math.radians) {
     Math.radians = function(degrees: number): number {
         return Math.TAU * (degrees / 360);

@@ -21,6 +21,11 @@ Array.prototype.removeAt = function (index) {
     this.splice(index, 1);
 };
 
+if (!Math.clamp) {
+    Math.clamp = function (value, min, max) {
+        return Math.min(Math.max(value, min), max);
+    };
+}
 if (!Math.radians) {
     Math.radians = function (degrees) {
         return Math.TAU * (degrees / 360);

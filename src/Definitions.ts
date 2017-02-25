@@ -12,16 +12,17 @@ interface Array<T>{
 }
 
 interface Math {
-    radians(degrees: number): number;
+    clamp(value: number, min: number, max: number): number;
+    degrees(radians: number): number;
     distanceBetween(x1: number, y1: number, x2: number, y2: number): number;
     lerp(start: number, stop: number, amount: number): number;
     mag(a: number, b: number, c: number): number;
     map(value: number, start1: number, stop1: number, start2: number, stop2: number): number;
     median(values: number[]): number;
+    normalise(num: number, min: number, max: number): number;
+    radians(degrees: number): number;
     randomBetween(low: number, high?: number): number;
     roundToDecimalPlace(num: number, dec: number): number;
-    degrees(radians: number): number;
-    normalise(num: number, min: number, max: number): number;
     TAU: number;
 }
 
