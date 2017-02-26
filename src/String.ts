@@ -12,6 +12,12 @@ String.format = function(): string {
     return s;
 }
 
+if (!String.prototype.includes) {
+    String.prototype.includes = function(str: string): boolean {
+        return this.indexOf(str) !== -1;
+    }
+}
+
 String.prototype.isAlphanumeric = function(): boolean {
     return /^[a-zA-Z0-9]*$/.test(this);
 }

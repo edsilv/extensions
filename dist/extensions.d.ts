@@ -4,6 +4,7 @@ declare function escape(s: string): any;
 declare function unescape(s: string): any;
 interface Array<T> {
     clone(): Array<T>;
+    includes(val: any): boolean;
     insert(item: any, index: number): void;
     move(fromIndex: number, toIndex: number): void;
     remove(item: any): void;
@@ -25,6 +26,7 @@ interface Math {
 }
 interface String {
     b64_to_utf8(str: string): string;
+    includes(str: string): boolean;
     isAlphanumeric(): boolean;
     ltrim(): string;
     rtrim(): string;

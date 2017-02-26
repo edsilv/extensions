@@ -2,6 +2,12 @@ Array.prototype.clone = function(): any[] {
     return this.slice(0);
 }
 
+if (!Array.prototype.includes) {
+    Array.prototype.includes = function (val: any): boolean{
+        return this.indexOf(val) !== -1;
+    };
+}
+
 Array.prototype.insert = function(item: any, index: number): void {
     this.splice(index, 0, item);
 }

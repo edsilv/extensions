@@ -12,6 +12,12 @@ var extensions = require('../dist/extensions');
 //    });
 //});
 
+describe("#stringIncludes", function() {
+    it("includes string", function () {
+        "my test string".includes("test").should.equal(true);
+    });
+});
+
 describe("#alphanumeric", function() {
     it("is alphanumeric", function () {
         "myteststring123".isAlphanumeric().should.equal(true);
@@ -50,6 +56,12 @@ describe("#toFileName", function() {
 });
 
 // array
+
+describe("#arrayIncludes", function() {
+    it("includes value", function () {
+        expect([0, 1, 2, 3].includes(2)).to.equal(true);
+    });
+});
 
 describe("#cloneArray", function() {
     it("clones array", function () {
