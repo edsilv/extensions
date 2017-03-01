@@ -42,7 +42,3 @@ interface String {
 interface StringConstructor {
     format(template: string, ...args: any[]): string;
 }
-
-interface Object {
-    toPlainObject(): any;
-}
