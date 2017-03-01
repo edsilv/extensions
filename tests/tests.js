@@ -76,3 +76,26 @@ describe("#arrayMove", function() {
         expect(t).to.deep.equal([0, 2, 1, 3]);
     });
 });
+
+// objects
+
+describe("#toPlainObject", function() {
+
+    function Foo() {
+        this.b = 2;
+    }
+    
+    Foo.prototype.c = 3;
+    
+    var newFoo = new Foo;
+
+    var data = { a: 1 };
+
+    var test1 = Object.assign(data, newFoo);
+    test1.should.deep.equal({ a: 1, b: 2 });
+
+    data = { a: 1 };
+
+    var test2 = Object.assign(data, newFoo.toPlainObject());
+    test2.should.deep.equal({ a: 1, b: 2, c: 3 });
+});

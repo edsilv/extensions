@@ -86,6 +86,15 @@ Math.roundToDecimalPlace = function (num, dec) {
 };
 Math.TAU = Math.PI * 2;
 
+//https://github.com/lodash/lodash/blob/master/toPlainObject.js
+Object.prototype.toPlainObject = function () {
+    var result = {};
+    for (var key in this) {
+        result[key] = this[key];
+    }
+    return result;
+};
+
 String.prototype.b64_to_utf8 = function () {
     return decodeURIComponent(escape(window.atob(this)));
 };
