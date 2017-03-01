@@ -6,7 +6,7 @@
   "scripts": {
     "test": "tests/tests.js"
   },
-  "types": "./dist/extensions.d.ts",
+  "types": "dist/extensions.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/edsilv/extensions.git"
