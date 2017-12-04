@@ -1,5 +1,4 @@
-// extensions v0.2.0 https://github.com/edsilv/extensions
-/// <reference path="../node_modules/typescript/lib/lib.es6.d.ts" />
+// extensions v0.2.1 https://github.com/edsilv/extensions
 declare function escape(s: string): any;
 declare function unescape(s: string): any;
 interface Array<T> {
